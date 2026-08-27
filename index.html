@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Jadwal Shalat Kotawaringin Timur</title>
 
+
 <style>
+
+/* ================================
+   DASAR
+================================ */
+
 *{
   box-sizing:border-box;
 }
@@ -19,115 +29,302 @@ body{
   color:#17332b;
 }
 
+
+/* ================================
+   KOTAK UTAMA
+================================ */
+
 .sholat-box{
+
   width:100%;
-  max-width:760px;
+  max-width:900px;
+
   margin:0 auto;
+
   background:#ffffff;
-  border:1px solid #e2ebe7;
-  border-radius:12px;
-  padding:16px;
-  box-shadow:0 3px 12px rgba(0,0,0,.06);
+
+  border:1px solid #dfe9e5;
+
+  border-radius:14px;
+
+  padding:18px;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.07);
+
 }
 
+
+/* ================================
+   JUDUL
+================================ */
+
 .head{
+
   text-align:center;
-  margin-bottom:12px;
+
+  margin-bottom:13px;
+
 }
 
 .title{
+
   color:#0b5d48;
-  font-size:18px;
+
+  font-size:21px;
+
   font-weight:700;
+
 }
 
 .location{
-  color:#687871;
-  font-size:12px;
-  margin-top:3px;
+
+  color:#6c7975;
+
+  font-size:13px;
+
+  margin-top:4px;
+
 }
 
+
+/* ================================
+   TANGGAL
+================================ */
+
 .date{
-  border-top:1px solid #edf1ef;
-  border-bottom:1px solid #edf1ef;
-  padding:9px 4px;
+
+  border-top:1px solid #e9efed;
+
+  border-bottom:1px solid #e9efed;
+
+  padding:10px 5px;
+
   text-align:center;
-  margin-bottom:12px;
+
+  margin-bottom:14px;
+
 }
 
 .masehi{
-  font-size:13px;
+
+  font-size:14px;
+
   font-weight:700;
+
+  color:#222;
+
 }
 
 .hijri{
+
   color:#0b5d48;
-  font-size:12px;
-  margin-top:3px;
+
+  font-size:13px;
+
+  margin-top:4px;
+
 }
 
+
+/* ================================
+   JADWAL SHALAT
+================================ */
+
 .times{
+
   display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:6px;
+
+  grid-template-columns:
+    repeat(6,1fr);
+
+  gap:7px;
+
 }
 
 .time{
-  background:#f4f8f6;
-  border-radius:7px;
+
+  background:#f3f7f5;
+
+  border-radius:8px;
+
   text-align:center;
-  padding:9px 3px;
+
+  padding:10px 4px;
+
 }
 
 .name{
+
   display:block;
+
   font-size:11px;
-  color:#687871;
-  margin-bottom:4px;
+
+  color:#687570;
+
+  margin-bottom:5px;
+
 }
 
 .hour{
+
   display:block;
-  color:#0b5d48;
-  font-size:17px;
+
+  font-size:18px;
+
   font-weight:700;
+
+  color:#0b5d48;
+
 }
+
+
+/* ================================
+   STATUS
+================================ */
 
 .status{
+
   text-align:center;
-  color:#8a9792;
+
+  color:#8a9692;
+
   font-size:10px;
+
   margin-top:10px;
+
 }
+
+
+/* ================================
+   COUNTDOWN
+================================ */
+
+.countdown-box{
+
+  margin-top:12px;
+
+  background:#eef7f3;
+
+  border:1px solid #d9ebe4;
+
+  border-radius:9px;
+
+  padding:10px;
+
+  text-align:center;
+
+}
+
+.countdown-title{
+
+  font-size:12px;
+
+  color:#687570;
+
+  margin-bottom:3px;
+
+}
+
+.countdown-time{
+
+  font-size:22px;
+
+  font-weight:700;
+
+  color:#0b5d48;
+
+  letter-spacing:1px;
+
+}
+
+.countdown-at{
+
+  font-size:10px;
+
+  color:#89948f;
+
+  margin-top:2px;
+
+}
+
+
+/* ================================
+   ERROR
+================================ */
 
 .error{
+
+  display:none;
+
   text-align:center;
-  color:#b44337;
+
+  color:#a94338;
+
   font-size:11px;
+
   margin-top:8px;
+
 }
 
-@media(max-width:600px){
+
+/* ================================
+   HP
+================================ */
+
+@media(max-width:650px){
 
   .sholat-box{
-    padding:13px;
+
+    padding:14px;
+
+    border-radius:11px;
+
+  }
+
+  .title{
+
+    font-size:18px;
+
   }
 
   .times{
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+      repeat(3,1fr);
+
   }
 
   .hour{
-    font-size:16px;
+
+    font-size:17px;
+
   }
+
+  .countdown-time{
+
+    font-size:20px;
+
+  }
+
 }
+
 </style>
 
 </head>
 
+
 <body>
 
+
+<!-- =================================
+     WIDGET JADWAL SHALAT
+================================= -->
+
 <div class="sholat-box">
+
+
+  <!-- JUDUL -->
 
   <div class="head">
 
@@ -142,59 +339,194 @@ body{
   </div>
 
 
+  <!-- TANGGAL -->
+
   <div class="date">
 
-    <div class="masehi" id="masehi">
+    <div
+      class="masehi"
+      id="masehi">
+
       Memuat tanggal...
+
     </div>
 
-    <div class="hijri" id="hijri">
+
+    <div
+      class="hijri"
+      id="hijri">
+
       Memuat tanggal Hijriah...
+
     </div>
 
   </div>
 
+
+  <!-- JADWAL -->
 
   <div class="times">
 
-    <div class="time">
-      <span class="name">Imsak</span>
-      <span class="hour" id="imsak">--:--</span>
-    </div>
 
     <div class="time">
-      <span class="name">Subuh</span>
-      <span class="hour" id="subuh">--:--</span>
+
+      <span class="name">
+        Imsak
+      </span>
+
+      <span
+        class="hour"
+        id="imsak">
+
+        --:--
+
+      </span>
+
     </div>
 
-    <div class="time">
-      <span class="name">Dzuhur</span>
-      <span class="hour" id="dzuhur">--:--</span>
-    </div>
 
     <div class="time">
-      <span class="name">Ashar</span>
-      <span class="hour" id="ashar">--:--</span>
+
+      <span class="name">
+        Subuh
+      </span>
+
+      <span
+        class="hour"
+        id="subuh">
+
+        --:--
+
+      </span>
+
     </div>
 
-    <div class="time">
-      <span class="name">Maghrib</span>
-      <span class="hour" id="maghrib">--:--</span>
-    </div>
 
     <div class="time">
-      <span class="name">Isya</span>
-      <span class="hour" id="isya">--:--</span>
+
+      <span class="name">
+        Dzuhur
+      </span>
+
+      <span
+        class="hour"
+        id="dzuhur">
+
+        --:--
+
+      </span>
+
+    </div>
+
+
+    <div class="time">
+
+      <span class="name">
+        Ashar
+      </span>
+
+      <span
+        class="hour"
+        id="ashar">
+
+        --:--
+
+      </span>
+
+    </div>
+
+
+    <div class="time">
+
+      <span class="name">
+        Maghrib
+      </span>
+
+      <span
+        class="hour"
+        id="maghrib">
+
+        --:--
+
+      </span>
+
+    </div>
+
+
+    <div class="time">
+
+      <span class="name">
+        Isya
+      </span>
+
+      <span
+        class="hour"
+        id="isya">
+
+        --:--
+
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- STATUS -->
+
+  <div
+    class="status"
+    id="status">
+
+    Memuat jadwal shalat...
+
+  </div>
+
+
+  <!-- COUNTDOWN -->
+
+  <div
+    class="countdown-box"
+    id="countdownBox">
+
+    <div
+      class="countdown-title"
+      id="countdownTitle">
+
+      Menuju waktu shalat berikutnya
+
+    </div>
+
+
+    <div
+      class="countdown-time"
+      id="countdown">
+
+      --:--:--
+
+    </div>
+
+
+    <div
+      class="countdown-at"
+      id="countdownAt">
+
     </div>
 
   </div>
 
 
-  <div class="status" id="status">
-    Memuat jadwal...
+  <!-- ERROR -->
+
+  <div
+    class="error"
+    id="error">
+
+    Jadwal belum dapat dimuat.
+
   </div>
 
-  <div class="error" id="error"></div>
 
 </div>
 
@@ -203,82 +535,97 @@ body{
 
 /* ==========================================
    ID KABUPATEN KOTAWARINGIN TIMUR
-   ========================================== */
+========================================== */
 
 const ID_KOTIM =
 "0bb4aec1710521c12ee76289d9440817";
 
 
 /* ==========================================
-   TANGGAL HARI INI WIB
-   ========================================== */
+   VARIABEL JADWAL
+========================================== */
 
-function tanggalWIB(){
-
-  const now = new Date();
-
-  const formatter =
-    new Intl.DateTimeFormat(
-      "en-CA",
-      {
-        timeZone:"Asia/Jakarta",
-        year:"numeric",
-        month:"2-digit",
-        day:"2-digit"
-      }
-    );
-
-  return formatter.format(now);
-
-}
+let jadwalHariIni = null;
 
 
 /* ==========================================
-   TAMPILKAN TANGGAL MASEHI
-   ========================================== */
+   TANGGAL INDONESIA
+========================================== */
 
 function tampilkanTanggal(){
 
-  const now = new Date();
+  const sekarang = new Date();
 
-  const tanggal =
+
+  /* TANGGAL MASEHI */
+
+  const tanggalMasehi =
     new Intl.DateTimeFormat(
       "id-ID",
       {
         timeZone:"Asia/Jakarta",
+
         weekday:"long",
+
         day:"numeric",
+
         month:"long",
+
         year:"numeric"
       }
-    ).format(now);
+    ).format(sekarang);
 
-  document.getElementById("masehi")
-    .textContent = tanggal;
+
+  document.getElementById(
+    "masehi"
+  ).textContent = tanggalMasehi;
 
 
   /* TANGGAL HIJRIAH */
 
   try{
 
-    const hijri =
+    let tanggalHijriah =
       new Intl.DateTimeFormat(
         "id-ID-u-ca-islamic",
         {
           timeZone:"Asia/Jakarta",
+
           day:"numeric",
+
           month:"long",
+
           year:"numeric"
         }
-      ).format(now);
+      ).format(sekarang);
 
-    document.getElementById("hijri")
-      .textContent = hijri + " H";
 
-  }catch(e){
+    /*
+      Beberapa browser dapat menghasilkan
+      tambahan "H".
 
-    document.getElementById("hijri")
-      .textContent = "";
+      Kita bersihkan agar tidak menjadi:
+      "1448 H H"
+    */
+
+    tanggalHijriah =
+      tanggalHijriah
+        .replace(/\s+H\s+H$/," H")
+        .replace(/\s+H$/,"");
+
+
+    document.getElementById(
+      "hijri"
+    ).textContent =
+      tanggalHijriah + " H";
+
+
+  }catch(error){
+
+    document.getElementById(
+      "hijri"
+    ).textContent =
+      "";
 
   }
 
@@ -286,17 +633,20 @@ function tampilkanTanggal(){
 
 
 /* ==========================================
-   AMBIL JADWAL SHALAT
-   ========================================== */
+   AMBIL JADWAL DARI MYQURAN
+========================================== */
 
 async function ambilJadwal(){
 
   try{
 
+
     const url =
       "https://api.myquran.com/v3/sholat/jadwal/"
-      + ID_KOTIM
-      + "/today?tz=Asia/Jakarta";
+      +
+      ID_KOTIM
+      +
+      "/today?tz=Asia/Jakarta";
 
 
     const response =
@@ -311,7 +661,7 @@ async function ambilJadwal(){
     if(!response.ok){
 
       throw new Error(
-        "Server API tidak merespons"
+        "API tidak merespons"
       );
 
     }
@@ -322,7 +672,7 @@ async function ambilJadwal(){
 
 
     console.log(
-      "Data API:",
+      "Data Jadwal Kotim:",
       hasil
     );
 
@@ -334,23 +684,24 @@ async function ambilJadwal(){
     ){
 
       throw new Error(
-        "Struktur data API tidak sesuai"
+        "Data jadwal tidak tersedia"
       );
 
     }
 
 
     /*
-      API mengembalikan:
+      API memberikan data seperti:
 
-      data.jadwal
-      └── 2026-08-27
-          ├── imsak
-          ├── subuh
-          ├── dzuhur
-          ├── ashar
-          ├── maghrib
-          └── isya
+      data
+       └── jadwal
+            └── 2026-08-27
+                 ├── imsak
+                 ├── subuh
+                 ├── dzuhur
+                 ├── ashar
+                 ├── maghrib
+                 └── isya
     */
 
 
@@ -360,79 +711,112 @@ async function ambilJadwal(){
       );
 
 
+    if(
+      daftarTanggal.length === 0
+    ){
+
+      throw new Error(
+        "Tanggal jadwal kosong"
+      );
+
+    }
+
+
     const tanggal =
       daftarTanggal[0];
 
 
-    const jadwal =
+    jadwalHariIni =
       hasil.data.jadwal[tanggal];
 
 
     console.log(
-      "Jadwal hari ini:",
-      jadwal
+      "Jadwal:",
+      jadwalHariIni
     );
 
 
     /* ======================================
-       MASUKKAN DATA KE TAMPILAN
-       ====================================== */
+       TAMPILKAN JAM
+    ====================================== */
 
-    document.getElementById("imsak")
-      .textContent =
-      jadwal.imsak || "--:--";
-
-
-    document.getElementById("subuh")
-      .textContent =
-      jadwal.subuh || "--:--";
+    document.getElementById(
+      "imsak"
+    ).textContent =
+      jadwalHariIni.imsak || "--:--";
 
 
-    document.getElementById("dzuhur")
-      .textContent =
-      jadwal.dzuhur || "--:--";
+    document.getElementById(
+      "subuh"
+    ).textContent =
+      jadwalHariIni.subuh || "--:--";
 
 
-    document.getElementById("ashar")
-      .textContent =
-      jadwal.ashar || "--:--";
+    document.getElementById(
+      "dzuhur"
+    ).textContent =
+      jadwalHariIni.dzuhur || "--:--";
 
 
-    document.getElementById("maghrib")
-      .textContent =
-      jadwal.maghrib || "--:--";
+    document.getElementById(
+      "ashar"
+    ).textContent =
+      jadwalHariIni.ashar || "--:--";
 
 
-    document.getElementById("isya")
-      .textContent =
-      jadwal.isya || "--:--";
+    document.getElementById(
+      "maghrib"
+    ).textContent =
+      jadwalHariIni.maghrib || "--:--";
 
 
-    document.getElementById("status")
-      .textContent =
+    document.getElementById(
+      "isya"
+    ).textContent =
+      jadwalHariIni.isya || "--:--";
+
+
+    /* STATUS */
+
+    document.getElementById(
+      "status"
+    ).textContent =
       "Jadwal hari ini • WIB";
 
 
-    document.getElementById("error")
-      .textContent = "";
+    document.getElementById(
+      "error"
+    ).style.display =
+      "none";
+
+
+    /*
+      Setelah jadwal berhasil dimuat,
+      langsung jalankan countdown.
+    */
+
+    updateCountdown();
 
 
   }catch(error){
 
+
     console.error(
-      "Error Jadwal Shalat:",
+      "Kesalahan jadwal:",
       error
     );
 
 
-    document.getElementById("status")
-      .textContent =
+    document.getElementById(
+      "status"
+    ).textContent =
       "Jadwal tidak dapat dimuat";
 
 
-    document.getElementById("error")
-      .textContent =
-      "Silakan refresh halaman.";
+    document.getElementById(
+      "error"
+    ).style.display =
+      "block";
 
 
   }
@@ -441,8 +825,272 @@ async function ambilJadwal(){
 
 
 /* ==========================================
-   JALANKAN
-   ========================================== */
+   COUNTDOWN
+========================================== */
+
+function updateCountdown(){
+
+  if(!jadwalHariIni){
+
+    return;
+
+  }
+
+
+  const sekarang =
+    new Date();
+
+
+  /*
+    Daftar waktu shalat.
+
+    Terbit dan Dhuha sengaja tidak
+    dimasukkan karena yang ditampilkan
+    hanya waktu shalat.
+  */
+
+  const daftarShalat = [
+
+    {
+      nama:"Imsak",
+      waktu:jadwalHariIni.imsak
+    },
+
+    {
+      nama:"Subuh",
+      waktu:jadwalHariIni.subuh
+    },
+
+    {
+      nama:"Dzuhur",
+      waktu:jadwalHariIni.dzuhur
+    },
+
+    {
+      nama:"Ashar",
+      waktu:jadwalHariIni.ashar
+    },
+
+    {
+      nama:"Maghrib",
+      waktu:jadwalHariIni.maghrib
+    },
+
+    {
+      nama:"Isya",
+      waktu:jadwalHariIni.isya
+    }
+
+  ];
+
+
+  let shalatBerikutnya =
+    null;
+
+
+  /*
+    Cari waktu shalat
+    yang belum lewat.
+  */
+
+  for(
+    const shalat
+    of daftarShalat
+  ){
+
+
+    if(
+      !shalat.waktu ||
+      shalat.waktu === "--:--"
+    ){
+
+      continue;
+
+    }
+
+
+    const bagian =
+      shalat.waktu.split(":");
+
+
+    const jam =
+      parseInt(
+        bagian[0],
+        10
+      );
+
+
+    const menit =
+      parseInt(
+        bagian[1],
+        10
+      );
+
+
+    const target =
+      new Date(sekarang);
+
+
+    target.setHours(
+      jam,
+      menit,
+      0,
+      0
+    );
+
+
+    if(
+      target.getTime()
+      >
+      sekarang.getTime()
+    ){
+
+      shalatBerikutnya = {
+
+        nama:
+          shalat.nama,
+
+        waktu:
+          shalat.waktu,
+
+        target:
+          target
+
+      };
+
+
+      break;
+
+    }
+
+  }
+
+
+  /*
+    Jika semua waktu hari ini
+    sudah lewat.
+
+    Maka countdown diarahkan
+    ke Subuh besok.
+  */
+
+  if(!shalatBerikutnya){
+
+    document.getElementById(
+      "countdownTitle"
+    ).textContent =
+      "Menuju Subuh besok";
+
+
+    document.getElementById(
+      "countdown"
+    ).textContent =
+      "--:--:--";
+
+
+    document.getElementById(
+      "countdownAt"
+    ).textContent =
+      "Jadwal hari ini telah selesai";
+
+
+    return;
+
+  }
+
+
+  /* ======================================
+     HITUNG SELISIH
+  ====================================== */
+
+  const selisih =
+    shalatBerikutnya.target.getTime()
+    -
+    sekarang.getTime();
+
+
+  let totalDetik =
+    Math.floor(
+      selisih / 1000
+    );
+
+
+  const jam =
+    Math.floor(
+      totalDetik / 3600
+    );
+
+
+  totalDetik =
+    totalDetik % 3600;
+
+
+  const menit =
+    Math.floor(
+      totalDetik / 60
+    );
+
+
+  const detik =
+    totalDetik % 60;
+
+
+  const hh =
+    String(jam)
+      .padStart(2,"0");
+
+
+  const mm =
+    String(menit)
+      .padStart(2,"0");
+
+
+  const ss =
+    String(detik)
+      .padStart(2,"0");
+
+
+  /* ======================================
+     TAMPILKAN COUNTDOWN
+  ====================================== */
+
+  document.getElementById(
+    "countdownTitle"
+  ).textContent =
+    "Menuju "
+    +
+    shalatBerikutnya.nama;
+
+
+  document.getElementById(
+    "countdown"
+  ).textContent =
+    hh
+    +
+    ":"
+    +
+    mm
+    +
+    ":"
+    +
+    ss;
+
+
+  document.getElementById(
+    "countdownAt"
+  ).textContent =
+    "Pukul "
+    +
+    shalatBerikutnya.waktu
+    +
+    " WIB";
+
+}
+
+
+/* ==========================================
+   JALANKAN SAAT HALAMAN DIBUKA
+========================================== */
 
 tampilkanTanggal();
 
@@ -450,13 +1098,28 @@ ambilJadwal();
 
 
 /* ==========================================
-   UPDATE OTOMATIS
-   ========================================== */
+   COUNTDOWN UPDATE SETIAP 1 DETIK
+========================================== */
+
+setInterval(
+  updateCountdown,
+  1000
+);
+
+
+/* ==========================================
+   REFRESH JADWAL SETIAP 30 MENIT
+========================================== */
 
 setInterval(
   ambilJadwal,
   30 * 60 * 1000
 );
+
+
+/* ==========================================
+   UPDATE TANGGAL SETIAP 1 JAM
+========================================== */
 
 setInterval(
   tampilkanTanggal,
@@ -465,5 +1128,7 @@ setInterval(
 
 </script>
 
+
 </body>
+
 </html>
