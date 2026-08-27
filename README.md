@@ -1,1 +1,1 @@
-# peta-sebaran-sekolah-kotim-baru
+# jadwal-sholat-kotim-baru
